@@ -1,0 +1,95 @@
+﻿<Window x:Class="CountryObserver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Country_Observer"
+        xmlns:vm="clr-namespace:Country_Observer.ViewModels"
+        mc:Ignorable="d"
+        Title="Обозреватель стран" Height="500" Width="1000" ResizeMode="NoResize">
+    
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid
+            IsReadOnly="True"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.RowSpan="2"
+            ItemsSource="{Binding Countries}"
+            AutoGenerateColumns="False"
+            Width="Auto">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Название" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Alpha3Code}" Header="Код" Width="50"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Capital}" Header="Столица" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Area}" Header="Площадь" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Population}" Header="Население" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Region}" Header="Регион" Width="75"></DataGridTextColumn>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+        <Grid
+            Grid.Row="0"
+            Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                Название страны
+            </Label>
+            
+            <TextBox
+                Grid.Row="1"
+                Text="{Binding _Country}"
+                TextAlignment="Left">
+            </TextBox>
+
+            <Label
+                Grid.Row="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Visibility="{Binding MessageVisibility}"
+                Foreground="{Binding MessageColor}"
+                Content="{Binding MessageText}">
+            </Label>
+
+            <Button
+                Grid.Row="3"
+                Command="{Binding GetCountryAPI}">
+                Получить страны по названию
+            </Button>
+
+            <Button
+                Grid.Row="4"
+                Command="{Binding GetCountryDb}">
+                Получить страны из Базы
+            </Button>
+
+            <Button
+                Grid.Row="5"
+                Command="{Binding AddCountriesToDb}"
+                Visibility="{Binding SaveButtonVisibility}">
+                Сохранить данные в Базу
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

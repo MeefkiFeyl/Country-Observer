@@ -1,0 +1,28 @@
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer.csprojAssemblyReference.cache
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Views\MainWindow.g.cs
+D:\Проекты\Country Observer\Country Observer\obj\Debug\App.g.cs
+D:\Проекты\Country Observer\Country Observer\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer_MarkupCompile.cache
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer_MarkupCompile.lref
+D:\Проекты\Country Observer\Country Observer\bin\Debug\Country Observer.exe.config
+D:\Проекты\Country Observer\Country Observer\bin\Debug\Country Observer.exe
+D:\Проекты\Country Observer\Country Observer\bin\Debug\Country Observer.pdb
+D:\Проекты\Country Observer\Country Observer\bin\Debug\EntityFramework.dll
+D:\Проекты\Country Observer\Country Observer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Проекты\Country Observer\Country Observer\bin\Debug\Newtonsoft.Json.dll
+D:\Проекты\Country Observer\Country Observer\bin\Debug\EntityFramework.xml
+D:\Проекты\Country Observer\Country Observer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Проекты\Country Observer\Country Observer\bin\Debug\Newtonsoft.Json.xml
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Views\MainWindow.baml
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer.g.resources
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country_Observer.Properties.Resources.resources
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer.csproj.GenerateResource.cache
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer.csproj.CoreCompileInputs.cache
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer.csproj.CopyComplete
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer.exe
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country Observer.pdb
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country_Observer.Migrations.202011180008002_InitialCreate.resources
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country_Observer.Migrations.AddMessagesTable.resources
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country_Observer.Migrations.EditMessagesTable.resources
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country_Observer.Migrations.EditMessagesTable1.resources
+D:\Проекты\Country Observer\Country Observer\obj\Debug\Country_Observer.Migrations.EditMessages.resources
