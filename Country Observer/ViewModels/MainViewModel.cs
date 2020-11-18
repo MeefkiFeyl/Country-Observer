@@ -71,7 +71,7 @@ namespace Country_Observer.ViewModels
 
             QueryHelper.SaveCountry(Context, Countries);
 
-            MessageManager(false, "red", Context.Messages.Find(2).Value);
+            MessageManager(false, "green", Context.Messages.Find(2).Value);
         });
 
         public ICommand GetCountryAPI => new DelegateCommand(obj =>
