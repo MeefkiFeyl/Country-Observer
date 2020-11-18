@@ -1,12 +1,9 @@
 ﻿using Country_Observer.Data;
 using Country_Observer.Models;
-using Country_Observer.Converters;
 using Moq;
 using System.Net;
 using System.Linq;
 using Xunit;
-using System.Collections.ObjectModel;
-using CountryObserver.Tests.Data;
 
 namespace CountryObserver.Tests
 {
