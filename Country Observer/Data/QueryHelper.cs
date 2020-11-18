@@ -22,15 +22,29 @@ namespace Country_Observer.Data
 
                 context.SaveChanges();
 
-                context.Countries.Add(new CountryDb
+                var targetCountry = context.Countries
+                        .Where(w => w.Name == country.Name).FirstOrDefault();
+
+                if (targetCountry != null)
                 {
-                    Name = country.Name,
-                    Alpha3Code = country.Alpha3Code,
-                    Capital = context.Cities.Local.Where(c => c.Name == country.Capital).Select(s => s.Id).FirstOrDefault(),
-                    Area = country.Area,
-                    Population = country.Population,
-                    Region = context.Regions.Local.Where(r => r.Name == country.Region).Select(s => s.Id).FirstOrDefault()
-                });
+                    targetCountry.Alpha3Code = country.Alpha3Code;
+                    targetCountry.Area = country.Area;
+                    targetCountry.Capital = context.Cities.Where(w => w.Name == country.Capital).Select(s => s.Id).FirstOrDefault();
+                    targetCountry.Population = country.Population;
+                    targetCountry.Region = context.Regions.Where(w => w.Name == country.Region).Select(s => s.Id).FirstOrDefault();
+                }
+                else
+                {
+                    context.Countries.Add(new CountryDb
+                    {
+                        Name = country.Name,
+                        Alpha3Code = country.Alpha3Code,
+                        Capital = context.Cities.Local.Where(c => c.Name == country.Capital).Select(s => s.Id).FirstOrDefault(),
+                        Area = country.Area,
+                        Population = country.Population,
+                        Region = context.Regions.Local.Where(r => r.Name == country.Region).Select(s => s.Id).FirstOrDefault()
+                    });
+                }  
             }
 
             context.SaveChanges();
